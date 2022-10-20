@@ -15,7 +15,6 @@ unsigned int convert_X(va_list args, buffer_t *output, unsigned char flags, int 
 * Return: The number of bytes stored to the buffer.
 */
 unsigned int convert_x(va_list args, buffer_t *output, unsigned char flags, int wid, int prec, unsigned char len)
-
 {
 unsigned long int num;
 unsigned int ret = 0;
@@ -40,11 +39,8 @@ return (ret);
 * @args: A va_list pointing to the argument to be converted.
 * @flags: Flag modifiers.
 * @wid: A width modifier.
-*
 * @prec: A precision modifier.
-*
 * @len: A length modifier.
-*
 * @output: A buffer_t struct containing a character array.
 * Return: The number of bytes stored to the buffer.
 */

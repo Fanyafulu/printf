@@ -63,7 +63,6 @@ return (ret);
 */
 
 unsigned int print_neg_width(buffer_t *output, unsigned int printed, unsigned char flags, int wid)
-
 {
 unsigned int ret = 0;
 char width = ' ';

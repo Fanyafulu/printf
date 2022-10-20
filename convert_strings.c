@@ -56,8 +56,7 @@ return (ret);
 * are stored as \x followed by the ASCII code value in hex.
 */
 
-unsigned int convert_S(va_list args, buffer_t *output,
-unsigned char flags, int wid, int prec, unsigned char len)
+unsigned int convert_S(va_list args, buffer_t *output, unsigned char flags, int wid, int prec, unsigned char len)
 {
 char *str, *null = "(null)", *hex = "\\x", zero = '0';
 int size, index;
@@ -110,7 +109,8 @@ str = va_arg(args, char *);
 if (str == NULL)
 return (_memcpy(output, null, 6));
 for (size = 0; *(str + size);)
-size++;										ret += print_string_width(output, flags, wid, prec, size);
+size++;
+ret += print_string_width(output, flags, wid, prec, size);
 end = size - 1;
 prec = (prec == -1) ? size : prec;
 for (i = 0; end >= 0 && i < prec; i++)
@@ -151,7 +151,8 @@ ret += print_string_width(output, flags, wid, prec, size);
 prec = (prec == -1) ? size : prec;
 for (i = 0; *(str + i) != '\0' && i < prec; i++)
 {
-for (j = 0; j < 52; j++)							{
+for (j = 0; j < 52; j++)
+{
 if (*(str + i) == *(alpha + j))
 {
 ret += _memcpy(output, (rot13 + j), 1);

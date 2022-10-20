@@ -26,7 +26,8 @@ unsigned int ret = 0;
 c = va_arg(args, int);
 ret += print_width(output, ret, flags, wid);
 ret += _memcpy(output, &c, 1);
-ret += print_neg_width(output, ret, flags, wid);				return (ret);
+ret += print_neg_width(output, ret, flags, wid);				
+return (ret);
 }
 
 /**
